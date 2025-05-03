@@ -16,4 +16,8 @@ RSpec.describe Calculator do
 	it "handle any amount of numbers" do
 		expect(Calculator.new.add("1,5,10,15")).to eq(31)
 	end
+
+	it "handle new lines between numbers (instead of commas)" do
+		expect(Calculator.new.add("1\n2,3")).to eq(6)
+	end
 end
