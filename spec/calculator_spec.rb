@@ -8,4 +8,8 @@ RSpec.describe Calculator do
 	it "given a single value returns a number" do
 		expect(Calculator.new.add("1")).to eq(1)
 	end
+
+	it "given a two value returns sum of two number" do
+		expect(Calculator.new.add("1,5")).to eq(6)
+	end
 end
