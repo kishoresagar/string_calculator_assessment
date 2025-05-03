@@ -12,4 +12,8 @@ RSpec.describe Calculator do
 	it "given a two value returns sum of two number" do
 		expect(Calculator.new.add("1,5")).to eq(6)
 	end
+
+	it "handle any amount of numbers" do
+		expect(Calculator.new.add("1,5,10,15")).to eq(31)
+	end
 end
